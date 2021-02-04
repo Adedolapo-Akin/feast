@@ -11,12 +11,12 @@ image:
 
 gcpServiceAccount:
   # gcpServiceAccount.enabled -- Flag to use [service account](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) JSON key
-  enabled: false
+  enabled: true
   existingSecret:
     # gcpServiceAccount.existingSecret.name -- Name of the existing secret containing the service account
-    name: feast-gcp-service-account
+    name: feast-store
     # gcpServiceAccount.existingSecret.key -- Key in the secret data (file name of the service account)
-    key: credentials.json
+    key: gcpServiceAccount.existingSecret.key=concise-hue-297815-449eca64adcd.json
 
 # envOverrides -- Extra environment variables to set
 envOverrides: {}
